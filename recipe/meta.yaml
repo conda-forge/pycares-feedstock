@@ -1,5 +1,5 @@
 {% set name = "pycares" %}
-{% set version = "3.1.1" %}
+{% set version = "3.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 18dfd4fd300f570d6c4536c1d987b7b7673b2a9d14346592c5d6ed716df0d104
+  sha256: da1899fde778f9b8736712283eccbf7b654248779b349d139cd28eb30b0fa8cd
 
 build:
-  number: 1
-  skip: True  # [py<=35]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  skip: true  # [py<=35]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -36,7 +36,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Python interface for c-ares'
+  summary: Python interface for c-ares
   description: |
     pycares is a Python module which provides an interface to c-ares. c-ares
     is a C library that performs DNS requests and name resolutions
