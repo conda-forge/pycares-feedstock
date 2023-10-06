@@ -1,5 +1,5 @@
 {% set name = "pycares" %}
-{% set version = "4.0.0" %}
+{% set version = "4.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d0154fc5753b088758fbec9bc137e1b24bb84fc0c6a09725c8bac25a342311cd
+  sha256: f47579d508f2f56eddd16ce72045782ad3b1b3b678098699e2b6a1b30733e1c2
 
 build:
-  number: 3
+  number: 0
   skip: true  # [py<=35]
   script: {{ PYTHON }} -m pip install . -vv
 
