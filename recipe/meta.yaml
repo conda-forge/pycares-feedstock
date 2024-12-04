@@ -31,10 +31,13 @@ requirements:
     - cffi >=1.5.0
 
 test:
+  requires:
+    - python
   imports:
     - pycares
   commands:
     - python -m pycares google.com
+    - pip check
 
 about:
   home: https://pypi.org/project/pycares/
