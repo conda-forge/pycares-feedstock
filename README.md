@@ -277,4 +277,5 @@ Feedstock Maintainers
 =====================
 
 * [@CurtLH](https://github.com/CurtLH/)
+* [@xhochy](https://github.com/xhochy/)
 
