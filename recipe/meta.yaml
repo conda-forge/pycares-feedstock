@@ -1,17 +1,16 @@
 {% set name = "pycares" %}
-{% set version = "4.0.0" %}
+{% set version = "4.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d0154fc5753b088758fbec9bc137e1b24bb84fc0c6a09725c8bac25a342311cd
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 025b6c2ffea4e9fb8f9a097381c2fecb24aff23fbd6906e70da22ec9ba60e19d
 
 build:
-  number: 3
-  skip: true  # [py<=35]
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,19 +19,24 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cffi                                   # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
     - cffi >=1.5.0
+    - setuptools
   run:
     - python
     - cffi >=1.5.0
 
 test:
+  requires:
+    - pip
   imports:
     - pycares
   commands:
     - python -m pycares google.com
+    - pip check
 
 about:
   home: https://pypi.org/project/pycares/
@@ -50,3 +54,4 @@ about:
 extra:
   recipe-maintainers:
     - CurtLH
+    - xhochy
