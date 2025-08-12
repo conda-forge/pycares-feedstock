@@ -10,7 +10,7 @@ source:
   sha256: 2fc2ebfab960f654b3e3cf08a732486950da99393a657f8b44618ad3ed2d39c1
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -55,3 +55,4 @@ extra:
   recipe-maintainers:
     - CurtLH
     - xhochy
+    - rfiorella
