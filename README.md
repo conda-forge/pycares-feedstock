@@ -340,5 +340,6 @@ Feedstock Maintainers
 =====================
 
 * [@CurtLH](https://github.com/CurtLH/)
+* [@rfiorella](https://github.com/rfiorella/)
 * [@xhochy](https://github.com/xhochy/)
 
