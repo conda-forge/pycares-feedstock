@@ -1,3 +1,5 @@
 # for testing cffi 2.0
 channel_sources:
   - conda-forge/label/cffi_rc,conda-forge
+zip_keys:
+- - channel_sources
