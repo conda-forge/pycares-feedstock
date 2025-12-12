@@ -27,6 +27,7 @@ requirements:
     - ${{ stdlib("c") }}
     - cmake
     - ninja
+    - make
   host:
     - python
     - pip
