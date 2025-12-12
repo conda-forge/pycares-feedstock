@@ -25,6 +25,8 @@ requirements:
         - cffi
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
+    - cmake
+    - ninja
   host:
     - python
     - pip
