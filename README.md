@@ -17,7 +17,6 @@ pycares is a Python module which provides an interface to c-ares. c-ares
 is a C library that performs DNS requests and name resolutions
 asynchronously.
 
-
 Current build status
 ====================
 
