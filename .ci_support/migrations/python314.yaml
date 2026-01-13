@@ -7,7 +7,6 @@ __migrator:
     migration_number: 1
     operation: key_add
     primary_key: python
-    use_local: true
     ordering:
         python:
             - 3.9.* *_cpython
@@ -28,17 +27,15 @@ __migrator:
         - pypy-meta
         - cross-python
         - python_abi
+        # Manually migrated (e.g. were blocked on missing dev dependencies)
+        - pyarrow
     exclude_pinned_pkgs: false
     ignored_deps_per_node:
         matplotlib:
             - pyqt
-    additional_zip_keys:
-        - channel_sources
 
 python:
 - 3.14.* *_cp314
 # additional entries to add for zip_keys
 is_python_min:
 - false
-channel_sources:
-- conda-forge/label/cffi_rc,conda-forge,conda-forge/label/python_rc
