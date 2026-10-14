@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pycares
-  version: "5.1.0"
+  version: "5.2.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 4ae0712df072773a3193b23f124d9458d6b2054a22c9ea0059c9dff6b8f91050
+  sha256: 90ea74fe26593d2c4e79e1ac4dcdff4a2434b183ec6feef0524e4874a7d307ef
 
 build:
   number: 0
