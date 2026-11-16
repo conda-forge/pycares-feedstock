@@ -13,7 +13,7 @@ source:
   sha256: 3e89edc56a3745046676207958bf3dbf2971c5df0d64de9f7a893eba8bf255b4
 
 build:
-  number: 0
+  number: 1
   script:
     - if: unix
       then: export PYCARES_USE_SYSTEM_LIB=1
